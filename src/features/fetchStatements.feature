@@ -46,7 +46,7 @@ Scenario: Bad fetch statements: request with bad [property] '[value]'
 
     Where:
         HTTP | property                     | value
-        401  | authority header             | bad auth
+        400  | authority header             | bad auth
         400  | version header               | 0.8.0
         400  | version header               | bad version
         400  | agent parameter              | test agent

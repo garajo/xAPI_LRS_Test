@@ -54,12 +54,12 @@ Scenario: Bad save statement: [type] request with bad [property] '[value]'
 
     Where:
         HTTP | type    | property              | value
-        401  | typical | authority header      | bad auth
+        400  | typical | authority header      | bad auth
         400  | typical | version header        | 0.8.0
         400  | typical | version header        | bad version
         400  | typical | Content-Type header   | bad content type
         400  | typical | statementId parameter | bad statementId
-        401  | minimal | authority header      | bad auth
+        400  | minimal | authority header      | bad auth
         400  | minimal | version header        | 0.8.0
         400  | minimal | version header        | bad version
         400  | minimal | Content-Type header   | bad content type

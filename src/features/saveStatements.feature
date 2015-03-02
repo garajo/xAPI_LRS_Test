@@ -21,7 +21,7 @@ Scenario: Bad save statements: [type] request with bad [property] '[value]'
         HTTP | type    | property              | value
         400  | typical | method                | PUT
         400  | typical | resource              | statement
-        401  | typical | authority header      | bad auth
+        400  | typical | authority header      | bad auth
         400  | typical | version header        | 0.8.0
         400  | typical | version header        | bad version
         400  | typical | Content-Type header   | bad content type
