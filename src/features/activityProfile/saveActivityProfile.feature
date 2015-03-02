@@ -67,8 +67,8 @@ Scenario: Bad save activity profile: typical request with bad [property] '[value
 
     Where:
         HTTP | property             | value
-        400  | resource             | activity/state
-        400  | resource             | activities/states
+        404  | resource             | activity/state
+        404  | resource             | activities/states
         405  | resource             | activities
         400  | version header       | bad version
         400  | version header       | 3.8.0

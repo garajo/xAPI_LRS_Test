@@ -53,8 +53,8 @@ Scenario: Bad retrieve agent profile ids: typical request with bad [property] '[
 
     Where:
         HTTP | property         | value
-        400  | resource         | agent/state
-        400  | resource         | agents/states
+        404  | resource         | agent/state
+        404  | resource         | agents/states
         400  | version header   | bad version
         400  | version header   | 3.8.0
         400  | authority header | Basic badAuth

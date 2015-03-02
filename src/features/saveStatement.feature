@@ -22,9 +22,9 @@ Scenario: Bad save statement: [type] request with [property] set to '[value]'
     Where:
         HTTP | type       | property            | value
         400  | typical    | method              | POST
-        400  | typical    | resource            | statement
+        404  | typical    | resource            | statement
         400  | minimal    | method              | PUT
-        400  | minimal    | resource            | statement
+        404  | minimal    | resource            | statement
         400  | minimal    | content             | null
         400  | attachment | Content-Type header | application/json
 

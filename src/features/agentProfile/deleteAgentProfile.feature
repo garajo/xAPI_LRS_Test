@@ -54,8 +54,8 @@ Scenario: Bad delete agent profile: typical request with bad [property] '[value]
 
     Where:
         HTTP | property         | value
-        400  | resource         | agent/profile
-        400  | resource         | agents/profiles
+        404  | resource         | agent/profile
+        404  | resource         | agents/profiles
         405  | resource         | agents
         400  | version header   | bad version
         400  | version header   | 3.8.0
