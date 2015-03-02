@@ -35,7 +35,7 @@ Scenario: Bad about: [type] request with bad [property] '[value]'
 
     Where:
         HTTP | type    | property         | value
-        400  | typical | resource         | abouts
+        404  | typical | resource         | abouts
         405  | typical | method           | PUT
         405  | typical | method           | POST
         405  | typical | method           | DELETE
