@@ -88,8 +88,8 @@ Scenario: Bad retrieve state: [type] request with bad [property] '[value]'
 
     Where:
        HTTP | type             | property               | value
-       400  | typical          | resource               | activity/state
-       400  | typical          | resource               | activities/states
+       404  | typical          | resource               | activity/state
+       404  | typical          | resource               | activities/states
        400  | typical          | version header         | bad version
        400  | typical          | version header         | 3.8.0
        400  | typical          | authority header       | Basic badAuth
