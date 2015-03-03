@@ -17,6 +17,6 @@ Scenario: Bad id: '[value]' ([description])
     Where:
         HTTP | type    | value                                | description
         400  | minimal | bad id                               | incorrect format
-        400  | minimal | 7396683c-0759-e411-b974-a0d3c123d81f | "e" in 3rd segment not acceptable version
+        200  | minimal | 7396683c-0759-e411-b974-a0d3c123d81f | "e" in 3rd segment not acceptable version
         400  | minimal | 7396683c-0759-1411-c974-a0d3c123d81f | "c" in 4th segment not acceptable variant
 
