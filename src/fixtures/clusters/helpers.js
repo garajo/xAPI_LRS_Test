@@ -191,7 +191,7 @@ module.exports = {
 
             obj.primers[0].content = "Document concurrency test: correctMatch";
 
-            obj.main.headers["If-Match"] = "e5fce8f9a08ed3d75cbe2ebc38574e1afd0bc13c";
+            obj.main.headers["If-Match"] = "\"e5fce8f9a08ed3d75cbe2ebc38574e1afd0bc13c\"";
             obj.main.content = "Document concurrency test: correctMatch (updated)";
 
             return obj;
