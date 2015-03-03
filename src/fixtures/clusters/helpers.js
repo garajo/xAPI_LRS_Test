@@ -211,7 +211,7 @@ module.exports = {
 
             obj.primers[0].content = "Document concurrency test: correctMatchUpperCaseEtag";
 
-            obj.main.headers["If-Match"] = "B757C3E7F20C8456B7AB3B3C6D9ADB50B5236787";
+            obj.main.headers["If-Match"] = "\"B757C3E7F20C8456B7AB3B3C6D9ADB50B5236787\"";
             obj.main.content = "Document concurrency test: correctMatchUpperCaseEtag (updated)";
 
             return obj;
@@ -231,7 +231,7 @@ module.exports = {
 
             obj.primers[0].content = "Document concurrency test: incorrectMatch";
 
-            obj.main.headers["If-Match"] = "b7a124bf1d7a7c522c20861fbadfa8fa2b5e0999"; //Intentionally incorrect hash
+            obj.main.headers["If-Match"] = "\"b7a124bf1d7a7c522c20861fbadfa8fa2b5e0999\""; //Intentionally incorrect hash
             obj.main.content = "Document concurrency test: incorrectMatch (updated)"; //Should not be the retrieved body
 
             return obj;
@@ -251,8 +251,8 @@ module.exports = {
 
             obj.primers[0].content = "Document concurrency test: ifMatchAndIfNoneMatch";
 
-            obj.main.headers["If-Match"] = "30ca9efbe456c8de6f15d3df2c91b41156b2785a";
-            obj.main.headers["If-None-Match"] = "*";
+            obj.main.headers["If-Match"] = "\"30ca9efbe456c8de6f15d3df2c91b41156b2785a\"";
+            obj.main.headers["If-None-Match"] = "\"*\"";
             obj.main.content = "Document concurrency test: ifMatchAndIfNoneMatch (updated)";
 
             return obj;
