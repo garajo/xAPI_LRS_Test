@@ -94,7 +94,7 @@ Scenario: Bad save agent profile: typical request with bad [property] '[value]'
         400  | version header   | 3.8.0
         400  | authority header | Basic badAuth
         401  | authority header | Basic TnsHNWplME1YZnc0VzdLTHRIWTo0aDdBb253Ml85WU53vSZLNlVZ
-        400  | method           | POST
+        204  | method           | POST
 
 Scenario: Bad save agent profile: typical request with [modifier] agent parameter with bad [property] '[value]'
 

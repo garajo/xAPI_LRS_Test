@@ -111,7 +111,7 @@ Scenario: Bad save state: [type] request with bad [property] '[value]'
         400  | typical          | version header         | 3.8.0
         400  | typical          | authority header       | Basic badAuth
         401  | typical          | authority header       | Basic TnsHNWplME1YZnc0VzdLTHRIWTo0aDdBb253Ml85WU53vSZLNlVZ
-        400  | typical          | method                 | POST
+        204  | typical          | method                 | POST
         400  | typical          | activityId parameter   | bad URI
         400  | withRegistration | activityId parameter   | bad URI
         400  | withRegistration | registration parameter | bad UUID
