@@ -206,7 +206,7 @@ makeRequest = function (cfg, callback, context, opts) {
         function (err, res) {
             cfg.response = res;
 
-            logger(requestCfg, res);
+            //logger(requestCfg, res);
             if (! err) {
                 checkCleanUp(cfg, context);
             }
