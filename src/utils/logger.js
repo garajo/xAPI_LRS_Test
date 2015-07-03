@@ -7,11 +7,16 @@ module.exports = function (requestCfg, res) {
     console.log("PARTS = ", requestCfg.multipart);
     console.log("BODY = ", requestCfg.body);
     console.log("::::::");
-    console.log('RES-JS-TYPE', typeof res);
+    console.log("RES-JS-TYPE", typeof res);
     try {
         if (res.statusCode === 500) {
-            console.log("RES-MESSAGE = ", res.body.split("<p class=\"exc-message\">")[1].split("</p>")[0]);
-            console.log("RES-TRACE = ", res.body.split("<div class=\"frame-code-container \">")[1].split("<div class=\"details\">")[0]);
+            try {
+                console.log("RES-MESSAGE = ", res.body.split("<p class=\"exc-message\">")[1].split("</p>")[0]);
+                console.log("RES-TRACE = ", res.body.split("<div class=\"frame-code-container \">")[1].split("<div class=\"details\">")[0]);
+            } catch (ex) {
+                console.log("RES = ", res.statusCode, res.body);
+                console.log("ETAG = ", res.headers.etag);
+            }
         } else if (res.statusCode === 400) {
             json = JSON.parse(res.body);
             console.log("RES-MESSAGE = ", json.message);
