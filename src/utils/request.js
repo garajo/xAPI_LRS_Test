@@ -10,8 +10,8 @@ var request = require("request"),
     buildUrl,
     checkCleanUp,
     makeRequest,
-    VOIDED = "http://adlnet.gov/expapi/verbs/voided";
-    // logger = require("./logger");
+    VOIDED = "http://adlnet.gov/expapi/verbs/voided",
+    logger = require("./logger");
 
 updateStat = function (cfg) {
     var statKey = cfg.request.method + " /" + cfg.request.resource;
@@ -206,7 +206,7 @@ makeRequest = function (cfg, callback, context, opts) {
         function (err, res) {
             cfg.response = res;
 
-            //logger(requestCfg, res);
+            logger(requestCfg, res);
             if (! err) {
                 checkCleanUp(cfg, context);
             }
