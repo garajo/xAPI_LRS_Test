@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         templateFile,
         cfg,
         mochaTestOpts = {
-            reporter: "progress",
+            reporter: "min",
             bail: false,
             timeout: 10000,
             slow: 1000
